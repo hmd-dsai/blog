@@ -1,28 +1,41 @@
 import markdown
 import os
 
-# Create an 'output' directory if it doesn't exist
 if not os.path.exists('dist'):
     os.makedirs('dist')
 
-# Load the HTML template
 with open('templates/base.html', 'r') as f:
     template = f.read()
 
-# Convert all posts
+# 1. New: List to store post info for the homepage
+posts_metadata = []
+
 for filename in os.listdir('posts-md'):
     if filename.endswith('.md'):
         with open(f'posts-md/{filename}', 'r') as f:
             content = f.read()
-            # Convert Markdown to HTML
             html_body = markdown.markdown(content)
             
-            # Fill the template
             final_html = template.replace('{{content}}', html_body)
             
-            # Save to the dist folder (rename .md to .html)
-            output_path = f"dist/{filename.replace('.md', '.html')}"
+            output_filename = filename.replace('.md', '.html')
+            output_path = f"dist/{output_filename}"
+            
             with open(output_path, 'w') as f:
                 f.write(final_html)
+            
+            # 2. New: Save the filename and a clean title for the index
+            clean_title = filename.replace('.md', '').replace('-', ' ').title()
+            posts_metadata.append({'title': clean_title, 'url': output_filename})
 
-print("Build complete! Files are in /dist")
+# 3. New: Generate index.html
+links_html = "<h1>My Blog Posts</h1><ul>"
+for post in posts_metadata:
+    links_html += f'<li><a href="{post["url"]}">{post["title"]}</a></li>'
+links_html += "</ul>"
+
+index_html = template.replace('{{content}}', links_html)
+with open('dist/index.html', 'w') as f:
+    f.write(index_html)
+
+print(f"Build complete! Generated {len(posts_metadata)} posts + index.html")
