@@ -21,7 +21,8 @@ for filename in os.listdir('posts-md'):
         title = post.get('title', filename.replace('.md', ''))
         date = post.get('date', 'Unknown Date')
         category = post.get('category', 'General')
-        
+        status = post.get('status', 'visible')
+
         # Convert content to HTML (added 'extra' for tables/fenced code)
         html_body = markdown.markdown(post.content, extensions=['extra', 'nl2br'])
         
@@ -32,14 +33,15 @@ for filename in os.listdir('posts-md'):
         output_name = filename.replace('.md', '.html')
         with open(f'dist/{output_name}', 'w') as f:
             f.write(full_html)
-            
-        posts_metadata.append({'title': title, 'date': str(date), 'url': output_name})
+        
+        if status != 'unlisted':
+            posts_metadata.append({'title': title, 'date': str(date), 'url': output_name})
 
 # Sort posts by date (newest first)
 posts_metadata.sort(key=lambda x: x['date'], reverse=True)
 
 # Generate index.html (Homepage)
-links_html = "<h1>Blog Posts</h1><ul>"
+links_html = "<h1>My Blog Posts</h1><ul>"
 for p in posts_metadata:
     links_html += f'<li>{p["date"]} - <a href="{p["url"]}">{p["title"]}</a></li>'
 links_html += "</ul>"

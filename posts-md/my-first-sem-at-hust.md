@@ -1,7 +1,7 @@
 ---
 title: My first semester at HUST
 date: 2026-02-14
-category: Life
+category: life
 ---
 
 ## First impressions
