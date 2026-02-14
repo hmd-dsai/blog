@@ -1,41 +1,55 @@
 import markdown
+import frontmatter
 import os
+import shutil
 
-if not os.path.exists('dist'):
-    os.makedirs('dist')
+# Ensure directories exist
+os.makedirs('dist', exist_ok=True)
 
 with open('templates/base.html', 'r') as f:
     template = f.read()
 
-# 1. New: List to store post info for the homepage
 posts_metadata = []
 
+# Process Markdown files
 for filename in os.listdir('posts-md'):
     if filename.endswith('.md'):
-        with open(f'posts-md/{filename}', 'r') as f:
-            content = f.read()
-            html_body = markdown.markdown(content)
+        # Parse the file with frontmatter
+        post = frontmatter.load(f'posts-md/{filename}')
+        
+        # Access metadata (using .get() to avoid errors if a field is missing)
+        title = post.get('title', filename.replace('.md', ''))
+        date = post.get('date', 'Unknown Date')
+        category = post.get('category', 'General')
+        
+        # Convert content to HTML (added 'extra' for tables/fenced code)
+        html_body = markdown.markdown(post.content, extensions=['extra'])
+        
+        # Combine metadata + body for the post page
+        post_header = f"<header><h1>{title}</h1><p>{date} | {category}</p></header>"
+        full_html = template.replace('{{content}}', post_header + html_body)
+        
+        output_name = filename.replace('.md', '.html')
+        with open(f'dist/{output_name}', 'w') as f:
+            f.write(full_html)
             
-            final_html = template.replace('{{content}}', html_body)
-            
-            output_filename = filename.replace('.md', '.html')
-            output_path = f"dist/{output_filename}"
-            
-            with open(output_path, 'w') as f:
-                f.write(final_html)
-            
-            # 2. New: Save the filename and a clean title for the index
-            clean_title = filename.replace('.md', '').replace('-', ' ').title()
-            posts_metadata.append({'title': clean_title, 'url': output_filename})
+        posts_metadata.append({'title': title, 'date': str(date), 'url': output_name})
 
-# 3. New: Generate index.html
-links_html = "<h1>My Blog Posts</h1><ul>"
-for post in posts_metadata:
-    links_html += f'<li><a href="{post["url"]}">{post["title"]}</a></li>'
+# Sort posts by date (newest first)
+posts_metadata.sort(key=lambda x: x['date'], reverse=True)
+
+# Generate index.html (Homepage)
+links_html = "<h1>Blog Posts</h1><ul>"
+for p in posts_metadata:
+    links_html += f'<li>{p["date"]} - <a href="{p["url"]}">{p["title"]}</a></li>'
 links_html += "</ul>"
 
-index_html = template.replace('{{content}}', links_html)
 with open('dist/index.html', 'w') as f:
-    f.write(index_html)
+    f.write(template.replace('{{content}}', links_html))
 
-print(f"Build complete! Generated {len(posts_metadata)} posts + index.html")
+# Copy the assets folder into dist
+if os.path.exists('assets'):
+    # If dist/assets exists from a previous run, delete it first to stay fresh
+    if os.path.exists('dist/assets'):
+        shutil.rmtree('dist/assets')
+    shutil.copytree('assets', 'dist/assets')

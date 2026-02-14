@@ -22,7 +22,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install markdown
+        run: pip install python-markdown python-frontmatter
 
       - name: Run build script
         run: python build.py
