@@ -23,10 +23,10 @@ for filename in os.listdir('posts-md'):
         category = post.get('category', 'General')
         
         # Convert content to HTML (added 'extra' for tables/fenced code)
-        html_body = markdown.markdown(post.content, extensions=['extra'])
+        html_body = markdown.markdown(post.content, extensions=['extra', 'nl2br'])
         
         # Combine metadata + body for the post page
-        post_header = f"<h1>{title}</h1><p>{date} | {category}</p>\n<hr>\n"
+        post_header = f"<header class='post-title'><h1>{title}</h1><p>{date} | {category}</p></header>"
         full_html = template.replace('{{content}}', post_header + html_body)
         
         output_name = filename.replace('.md', '.html')
