@@ -26,7 +26,7 @@ for filename in os.listdir('posts-md'):
         html_body = markdown.markdown(post.content, extensions=['extra'])
         
         # Combine metadata + body for the post page
-        post_header = f"<h1>{title}</h1><p>{date} | {category}</p><hr>"
+        post_header = f"<h1>{title}</h1><p>{date} | {category}</p>\n<hr>\n"
         full_html = template.replace('{{content}}', post_header + html_body)
         
         output_name = filename.replace('.md', '.html')
