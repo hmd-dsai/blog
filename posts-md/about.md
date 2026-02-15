@@ -13,12 +13,18 @@ I'm Hoàng Minh Đức, first-year student at Hanoi University of Science and Te
 
 I have always been fascinated by the power of AI, and am set to advance in AI research.
 
+### Some of my interests
+- LLM core mechanisms
+- LLM interpretability
+- Urban planning and simulation
+
 ### My current work
-- Research into LLM Safety & Trustworthy LLM (research team led by Minh N. Ta)
-- Optimize Hanoi Traffic Network using Neural Networks
+- Research Assistant, LLM Safety & Trustworthy LLM (supervised by Minh N. Ta).
+- Predicting Hanoi Traffic Flow using Graph Neural Networks (GNNs).
+- Miscellaneous activities as a Data&AI Developer at Google Developer Group on Campus - HUST (GDG-HUST).
 - Survive first year at HUST :>
 
-## Contact me
+### Contact me
 - **Email:** hoangminhduc.als@gmail.com
 - **GitHub:** <a href="https://github.com/hmd-dsai/">https://github.com/hmd-dsai/</a>
 - **LinkedIn:** <a href="https://www.linkedin.com/in/hmd-dsai">https://www.linkedin.com/in/hmd-dsai</a>
