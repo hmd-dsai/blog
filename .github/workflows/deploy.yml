@@ -30,7 +30,7 @@ jobs:
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist/' # This tells GitHub to host whatever is in /dist
+          path: 'dist/'
 
       - name: Deploy
         uses: actions/deploy-pages@v4
