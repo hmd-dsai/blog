@@ -22,7 +22,7 @@ I have always been fascinated by the power of AI, and am set to advance in AI re
 ### My past work
 - **Thanh Hoa Province National Exam Analysis:** Analysis of Thanh Hoa Province's National High School Examination 2025 results. *View on* [*GitHub*](https://github.com/hmd-dsai/thptqg25-thanh_hoa).
 - **Marketing Analytics**: Explore + Predict customer behavior. *View on* [*GitHub*](https://github.com/hmd-dsai/ifood-marketing-campaign-analysis).
-  - *Context:* [*Why I chose DS-AI (rollercoaster plot)*](https://hmd-dsai.github.io/blog/20250822-why_i_chose_dsai.html).
+    - *Context:* [*Why I chose DS-AI (rollercoaster plot)*](https://hmd-dsai.github.io/blog/20250822-why_i_chose_dsai.html).
 - **This blog**. *View on* [*GitHub*](https://github.com/hmd-dsai/blog).
 
 ### Some of my interests
