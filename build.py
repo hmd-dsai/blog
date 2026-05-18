@@ -48,7 +48,7 @@ for p in posts_metadata:
 links_html += "</ul>"
 
 with open('dist/index.html', 'w') as f:
-    f.write(template.replace('{{content}}', links_html))
+    f.write(template.replace('{{content}}', links_html).replace('{{title}}', ''))
 
 # Update assets/ into dist/
 if os.path.exists('assets'):
