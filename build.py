@@ -26,6 +26,9 @@ for filename in os.listdir('posts-md'):
         
         post_header = f"<header class='post-title'><h1>{title}</h1><p>{date} | {category}</p></header>"
         full_html = template.replace('{{content}}', post_header + html_body)
+
+        title_and_meta = f'<title>{title} | HMD\'s Dev Terminal</title>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">'
+        full_html = full_html.replace('{{title}}', title_and_meta)
         
         output_name = filename.replace('.md', '.html')
         with open(f'dist/{output_name}', 'w') as f:
