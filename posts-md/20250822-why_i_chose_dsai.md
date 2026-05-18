@@ -38,8 +38,10 @@ I started exploring this field by taking some online courses, like *Data Analyti
 
 The concept I remember the most (and probably the first thing I'd remember when anyone mentions GMLCC) is *Gradient Descent*. Bear in mind I learned about this as a 12th grade student, knew knows nothing about gradients, and was thrown in the face with a formula with a bunch of ∂'s. I had to spend days trying to wrap my head around this, watching a bunch of YouTube videos on partial derivatives and the like, before the "Eureka" moment. Learning maths was indeed *stressful*, but this time it was different. At no point did I find myself wanting to just give up and accept that "gradient descent works", instead, I just kept learning from this knowledge to that knowledge to over-there knowledge until I fully understood what gradient descent represents (you can say I got really deep into the rabbit hole). This time, the *stress* was actually enjoyable.
 
-![Math jumpscare: Calculating weight derivatives in Linear Regression](assets/20250822-1-math_jumpscare.png)
-*Image: Math jumpscare - Calculating weight derivatives in Linear Regression (screenshot from GMLCC)*
+<figure>
+  <img src="assets/20250822-1-math_jumpscare.png" alt="Math jumpscare: Calculating weight derivatives in Linear Regression" width="700">
+  <figcaption>Math jumpscare - Calculating weight derivatives in Linear Regression (screenshot from GMLCC)</figcaption>
+</figure>
 
 I did one last step to make this phase complete: do a Business Analytics project, using what I've learned. I got a marketing dataset from the Internet, and did EDA (Exploratory Data Analytics) and Predictive Analysis on it. In case you're interested, you can view the project on my GitHub: <https://github.com/hmd-dsai/ifood-marketing-campaign-analysis>.
 
