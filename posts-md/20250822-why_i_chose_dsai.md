@@ -1,7 +1,8 @@
 ---
 title: Why I chose DS-AI (rollercoaster plot)
 date: 2025-08-22
-category: study
+category: [business, career, ds-ai, reflection, study]
+abstract: Running away from a math background out of insecurity, only to end up back where I started. This is the story of how a phase in the business field unexpectedly landed me in Data Science & AI.
 ---
 
 ## My "villain arc" backstory

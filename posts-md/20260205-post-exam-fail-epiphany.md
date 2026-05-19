@@ -1,7 +1,8 @@
 ---
 title: Post-exam-fail Epiphany
 date: 2026-02-05
-category: study
+category: [reflection, study]
+abstract: The abnormally bad performance in my Algebra finals exposed the limits of how I had been managing time since high school. And I'm refactoring my routine to fix that.
 ---
 
 ## Context: Posing the problem
