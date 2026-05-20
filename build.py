@@ -2,6 +2,12 @@ import markdown
 import frontmatter
 import os
 import shutil
+from datetime import date as date_type
+
+def format_date(d):
+    if isinstance(d, date_type):
+        return f'<time datetime="{d.isoformat()}">{d.strftime("%B %d, %Y")}</time>'
+    return str(d)
 
 os.makedirs('dist', exist_ok=True)
 
@@ -30,7 +36,7 @@ for filename in os.listdir('posts-md'):
         post_header = (
             f"<header class='post-title'>"
             f"<h1>{title}</h1>"
-            f"<p class='post-header-meta'>{date}"
+            f"<p class='post-header-meta'>{format_date(date)}"
             f"<span class='post-tags'>{tags_html}</span></p>"
             f"</header>"
         )
@@ -47,7 +53,7 @@ for filename in os.listdir('posts-md'):
         if status != 'unlisted':
             posts_metadata.append({
                 'title': title,
-                'date': str(date),
+                'date': date,
                 'url': output_name,
                 'categories': categories,
                 'abstract': abstract,
@@ -64,7 +70,7 @@ for p in posts_metadata:
     cards_html += (
         f'<article class="post-card">'
         f'<div class="post-card-meta">'
-        f'<span class="post-date">{p["date"]}</span>'
+        f'<span class="post-date">{format_date(p["date"])}</span>'
         f'<span class="post-tags">{tags_html}</span>'
         f'</div>'
         f'<h2><a href="{p["url"]}">{p["title"]}</a></h2>'
