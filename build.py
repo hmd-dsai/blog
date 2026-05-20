@@ -9,7 +9,9 @@ def format_date(d):
         return f'<time datetime="{d.isoformat()}">{d.strftime("%B %d, %Y")}</time>'
     return str(d)
 
-os.makedirs('dist', exist_ok=True)
+if os.path.exists('dist'):
+    shutil.rmtree('dist')
+os.makedirs('dist')
 
 with open('templates/base.html', 'r') as f:
     template = f.read()
@@ -44,9 +46,14 @@ for filename in os.listdir('posts-md'):
 
         title_and_meta = f'<title>{title} | HMD\'s Dev Terminal</title>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">'
         full_html = full_html.replace('{{title}}', title_and_meta)
+        full_html = full_html.replace('{{base}}', '../')
+        full_html = full_html.replace('src="assets/', 'src="../assets/')
+        full_html = full_html.replace('href="assets/', 'href="../assets/')
 
-        output_name = filename.replace('.md', '.html')
-        with open(f'dist/{output_name}', 'w') as f:
+        slug = filename.replace('.md', '')
+        output_dir = f'dist/{slug}'
+        os.makedirs(output_dir, exist_ok=True)
+        with open(f'{output_dir}/index.html', 'w') as f:
             f.write(full_html)
 
         # Hide unlisted posts
@@ -54,7 +61,7 @@ for filename in os.listdir('posts-md'):
             posts_metadata.append({
                 'title': title,
                 'date': date,
-                'url': output_name,
+                'url': f'{slug}/',
                 'categories': categories,
                 'abstract': abstract,
             })
@@ -80,7 +87,7 @@ for p in posts_metadata:
 cards_html += "</div>"
 
 with open('dist/index.html', 'w') as f:
-    f.write(template.replace('{{content}}', cards_html).replace('{{title}}', ''))
+    f.write(template.replace('{{content}}', cards_html).replace('{{title}}', '').replace('{{base}}', './'))
 
 # Update assets/ into dist/
 if os.path.exists('assets'):

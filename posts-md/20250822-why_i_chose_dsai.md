@@ -69,4 +69,4 @@ From this very specific personal experience of mine, my single 2 pieces of advic
 1. Don't let your insecurities overwhelm your decisions.
 2. Try to gain first-hand experience of the jobs you're interested in (if you still have time). It is much, much more insightful than reading "Ten Reasons to Start Learning DS-AI Today" off the Internet.
 
-If you're having trouble in career orientation, don't hesitate to contact me ;). I wouldn't say I have all the information you need (after all I'm only 18 watcha expect), but I'd be happy to help you to the best of my ability as I used to be in the same boat. My contact info is in the [About](https://hmd-dsai.github.io/blog/about.html) page.
+If you're having trouble in career orientation, don't hesitate to contact me ;). I wouldn't say I have all the information you need (after all I'm only 18 watcha expect), but I'd be happy to help you to the best of my ability as I used to be in the same boat. My contact info is in the [About](https://hmd-dsai.github.io/blog/about) page.
