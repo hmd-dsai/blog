@@ -12,21 +12,6 @@
     --nc-ac-tx: #ffffff;
 }
 
-/* Logo at the top of webpages */
-a.nav-logo,
-a.nav-logo:visited {
-  display: block;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: black !important;
-}
-
-.post-title {
-  background-color: #ffffff;
-}
-
 body {
     max-width: 800px;
     padding: 2rem;
@@ -55,6 +40,17 @@ figcaption {
     font-size: 0.9rem;
 }
 
+/* Logo at the top of webpages */
+a.nav-logo,
+a.nav-logo:visited {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black !important;
+}
+
 /* Post tags (chip/badge) */
 .post-tags {
     display: inline-flex;
@@ -77,6 +73,10 @@ figcaption {
 }
 
 /* Post header meta line */
+.post-title {
+    background-color: var(--nc-bg-1);
+}
+
 .post-header-meta {
     color: var(--nc-tx-2);
     font-size: 0.9rem;
