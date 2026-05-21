@@ -87,7 +87,7 @@ for p in posts_metadata:
 cards_html += "</div>"
 
 with open('dist/index.html', 'w') as f:
-    f.write(template.replace('{{content}}', cards_html).replace('{{title}}', '').replace('{{base}}', './'))
+    f.write(template.replace('{{content}}', cards_html).replace('{{title}}', '<title>HMD\'s Dev Terminal</title>').replace('{{base}}', './'))
 
 # Update assets/ into dist/
 if os.path.exists('assets'):
