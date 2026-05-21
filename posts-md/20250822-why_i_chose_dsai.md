@@ -26,6 +26,7 @@ Overall, it was a truly satisfying experience, and it successfully fueled my int
 This was when I got serious enough to sign up for a national business competition. In preparation, I spent months learning business fundamentals and connected some friends and seniors for advice. Our team had to take an MCQ test for the 1st round, and make a detailed business campaign (taking the roles of Product, Marketing, Sales, and Finance teams) for launching a tech solution for the 2nd (semi-final) round (I'm being vague here, but I can send you the question prompt for this round through email if you want). We didn't get into the finals, though.
 
 Overall, I'd consider this an *insightful* experience. There were a lot of things I realized after this competition:
+
 1. The Business Discussion Hub was only meant to be a friendly introduction into business, unlike here in Dash for Impact where I got to experience first-hand what working in business was actually like in real life (or at least close to what it was actually like). It was incredibly stressful with too much on the to-do list for a very limited amount of time.
 2. *Stress* is something I would expect from any job, but in this competition, I don't find it an enjoyable type of *stress* (mind the emphasis!). I did not feel like continuing work at any point, and it always felt like a burden to me. I supposed it was because *I was not doing what I enjoy*, and given the context of career orientation, this was a critical finding.
 
@@ -55,17 +56,20 @@ Back to the maths story. After all those exposure, my attitude to maths had chan
 My strategy for the program choice was, to choose something (1) I'm good at doing, (2) I enjoy to do, (3) the society needs me to do. With that and all my experiences in mind, Data Science & AI (DS-AI) was clearly my best option. In fact, I just received my acceptance notice into the DS-AI program at Hanoi University of Science and Technology today (my first preference!).
 
 Will I regret that choice? I don't know, as it is still too early to tell. But I'm certain that's not likely to happen, after all those experiences I had and thorough considerations.
+
 - P/S (2026/01): I *absolutely* do not regret this decision. I am learning everything I enjoy (Calculus, Algebra, etc.), meeting talented people around me, pushing myself through *stressful but enjoyable* hackathons, and so on.
 
 ## Rewind: Do my Business experiences go to waste?
 
 No. Because:
+
 1. They gave me my confidence that I'm not socially awkward at all even if I'm good at maths, as these two phenomena are not correlated from the start.
 2. This point is more impactful: I learned a lot about how businesses function, about market mentality and the like. This gives me filters whenever I kick off a tech project: does my project solve a particular problem of a group of people; is my project going to be financially sustainable; etc. I'm also much more ready to try and launch a project to the market when I have knowledge of how markets function.
 
 ## Final words, in case you are lost in career orientation
 
 From this very specific personal experience of mine, my single 2 pieces of advice would be:
+
 1. Don't let your insecurities overwhelm your decisions.
 2. Try to gain first-hand experience of the jobs you're interested in (if you still have time). It is much, much more insightful than reading "Ten Reasons to Start Learning DS-AI Today" off the Internet.
 
