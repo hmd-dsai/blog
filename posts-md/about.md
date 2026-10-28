@@ -8,7 +8,7 @@ status: unlisted
 I'm Hoàng Minh Đức, first-year student at Hanoi University of Science and Technology (HUST), majoring in Data Science and Artificial Intelligence (DS-AI).
 
 <figure>
-  <img src="assets/me.jpg" width="500" height="500" style="object-fit: cover;" alt="Hoàng Minh Đức">
+  <img src="assets/me.png" width="500" height="500" style="object-fit: cover;" alt="Hoàng Minh Đức">
 </figure>
 
 I have always been fascinated by the power of AI, and am set to advance in AI research.
