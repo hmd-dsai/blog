@@ -26,7 +26,7 @@ The theme was *Agentic AI: Agents of Change*. We had two and a half weeks to sub
 
 We started well. We agreed on a timeline, split up the work, brainstormed, and settled on an idea we liked: an AI assistant for Hanoi's buses, which don't run on fixed schedules, that would pick your best route from live bus positions.
 
-Then we sent the proposal to a senior for feedback. He told us that our idea (and by extension, every other idea on our list) was an *AI-integrated app*, not an *AI agent system*. He then spent a good while passionately teaching us what agents actually are. Shoutout to [@NĐT](https://www.linkedin.com/in/triducpham/) for this timely intervention :>
+Then we sent the proposal to a senior for feedback. He told us that our idea (and by extension, every other idea on our list) was an *AI-integrated app*, not an *AI agent system*. He then spent a good while passionately teaching us what agents actually are. Shoutout to [@PĐT](https://www.linkedin.com/in/triducpham/) for this timely intervention :>
 
 That was one week before the deadline, and everything had to go straight into the trash bin.
 
